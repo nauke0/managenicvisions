@@ -6,8 +6,6 @@ on:
   schedule:
     - cron: "13 21 * * *"  # daily, early morning Adelaide time
   workflow_dispatch:  # adds a "Run workflow" button on the Actions tab
-  push:
-    branches: [claude/sweet-carson-bnejgu]  # dry-run test only; remove once on main
 
 permissions:
   contents: read
@@ -24,4 +22,3 @@ jobs:
       - run: python scripts/show_monitor.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DRY_RUN: ${{ github.event_name == 'push' && '1' || '' }}
