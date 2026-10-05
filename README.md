@@ -18,5 +18,8 @@ emails you about it.
 - **Not getting emails?** Make sure you're watching this repo (Watch button →
   *All Activity*) and that email is on under GitHub Settings → Notifications.
 
+Every SA/VIC show it finds is also saved in `data/shows.json` (date, name,
+venue, state, federation), which feeds the show dashboard.
+
 The code is in `scripts/show_monitor.py`; the schedule is in
 `.github/workflows/show-monitor.yml`.

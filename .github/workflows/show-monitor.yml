@@ -1,14 +1,15 @@
 name: Show monitor
 
-# Checks the MyCompPrep competition calendar daily and opens an issue
-# (which GitHub emails to you) when a new SA or VIC show is listed.
+# Checks the MyCompPrep competition calendar daily, opens an issue (which
+# GitHub emails to you) when a new SA or VIC show is listed, and saves every
+# SA/VIC show to data/shows.json for the dashboard.
 on:
   schedule:
     - cron: "13 21 * * *"  # daily, early morning Adelaide time
   workflow_dispatch:  # adds a "Run workflow" button on the Actions tab
 
 permissions:
-  contents: read
+  contents: write
   issues: write
 
 jobs:
@@ -22,3 +23,12 @@ jobs:
       - run: python scripts/show_monitor.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Save show data
+        if: always()
+        run: |
+          [ -f data/shows.json ] || exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows.json
+          git diff --cached --quiet || git commit -m "Update show data"
+          git push
