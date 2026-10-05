@@ -89,7 +89,12 @@ def extract_listings(html):
     parser.feed(html)
     # Table rows are the expected layout; header rows (all <th>) are skipped
     # naturally because they won't mention a state.
-    listings = [" | ".join(c for c in row if c) for row in parser.rows if len(row) >= 2]
+    # Drop empty cells and the site's "Register →" button text.
+    listings = [
+        " | ".join(c for c in row if c and not c.lower().startswith("register"))
+        for row in parser.rows
+        if len(row) >= 2
+    ]
     if not listings:
         # Fallback if the site switches to a list layout. Short items are
         # navigation links, not shows.
