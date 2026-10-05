@@ -1,7 +1,42 @@
 {
-  "shows": [],
-  "last_error": {
-    "at": "2026-10-05T22:38:46+00:00",
-    "message": "The page loaded but no show listings were found in it."
-  }
+  "checked_at": "2026-10-05T22:40:34+00:00",
+  "source": "https://mycompprep.com/competition-calendar/",
+  "shows": [
+    {
+      "key": "91aad448f59260a3",
+      "listing": "04 Oct | SA State Titles Norwood Concert Hall, Adelaide | SA | ICN",
+      "date": "2026-10-04",
+      "date_label": "04 Oct",
+      "name": "SA State Titles",
+      "venue": "Norwood Concert Hall, Adelaide",
+      "state": "SA",
+      "federation": "ICN",
+      "first_seen": "2026-10-05",
+      "listed": true
+    },
+    {
+      "key": "f5031470d1dd4d9b",
+      "listing": "04 Oct | Victorian Muscle & Model Championships Encore Events Centre, Hoppers Crossing | VIC | ICN",
+      "date": "2026-10-04",
+      "date_label": "04 Oct",
+      "name": "Victorian Muscle & Model Championships",
+      "venue": "Encore Events Centre, Hoppers Crossing",
+      "state": "VIC",
+      "federation": "ICN",
+      "first_seen": "2026-10-05",
+      "listed": true
+    },
+    {
+      "key": "ed4c8be853cf7f0b",
+      "listing": "17 Oct | Victorian State Pro Qualifier 360 Main Road, Lower Plenty | VIC | ANB",
+      "date": "2026-10-17",
+      "date_label": "17 Oct",
+      "name": "Victorian State Pro Qualifier",
+      "venue": "360 Main Road, Lower Plenty",
+      "state": "VIC",
+      "federation": "ANB",
+      "first_seen": "2026-10-05",
+      "listed": true
+    }
+  ]
 }
