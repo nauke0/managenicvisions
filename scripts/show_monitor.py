@@ -331,6 +331,9 @@ def main():
     listings, matches = extract_listings(html)
     print(f"Found {len(listings)} listings, {len(matches)} in SA or VIC.")
     if not listings:
+        title = re.search(r"<title[^>]*>(.*?)</title>", html, re.I | re.S)
+        print(f"Page was {len(html)} characters, {html.count('<tr')} table rows, "
+              f"title {clean(title.group(1)) if title else 'missing'!r}")
         return fail("The page loaded but no show listings were found in it.")
 
     if dry_run:
