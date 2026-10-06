@@ -11,6 +11,7 @@
 //   GET  /m/<token>/board.json  the board's details
 //   GET  /m/<token>/p/<file>    one of the board's photos
 //   GET  /m/<token>/status      { confirmedAt } for this board
+//   GET  /m/<token>/event/<hmua|shoot>.ics   calendar file (Apple Calendar)
 //   POST /m/<token>/confirm     the client confirms they're happy
 //
 // Confirmations are written to the private GitHub repo
@@ -55,6 +56,12 @@ export default {
       const res = await env.ASSETS.fetch(new URL("/data/" + token + "/" + rest[1], url));
       if (!res.ok) return new Response("Not found", { status: 404 });
       return new Response(res.body, { headers: { "Content-Type": rest[1].endsWith(".png") ? "image/png" : "image/jpeg", ...noStore } });
+    }
+    if (rest[0] === "event" && /^(hmua|shoot)\.ics$/.test(rest[1] || "") && request.method === "GET") {
+      const kind = rest[1].slice(0, -4), ics = calendarFile(board, kind, token);
+      if (!ics) return page(404, "No date yet", "This appointment doesn’t have a date and time yet.");
+      return new Response(ics, { headers: { "Content-Type": "text/calendar; charset=utf-8",
+        "Content-Disposition": 'attachment; filename="nicvisions-' + (kind === "hmua" ? "hair-and-makeup" : "photoshoot") + '.ics"', ...noStore } });
     }
     if (rest[0] === "status" && request.method === "GET") {
       const c = await readConfirmation(env, token);
@@ -143,6 +150,48 @@ async function writeConfirmation(env, token, record) {
   };
   const res = await fetch(confirmationUrl(env, token), { method: "PUT", headers: { ...ghHeaders(env), "Content-Type": "application/json" }, body: JSON.stringify(body) });
   return res.ok || res.status === 422; // 422: already exists, so already confirmed
+}
+
+// ---------- calendar files ----------
+// Board times are Adelaide local times. Keep the wording in step with
+// calEvent() in the client page.
+const EVENT_TZ = "Australia/Adelaide";
+const EVENT_MINUTES = { hmua: 90, shoot: 120 };
+function tzOffset(ms) {
+  const p = {};
+  new Intl.DateTimeFormat("en-US", { timeZone: EVENT_TZ, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit" })
+    .formatToParts(new Date(ms)).forEach((x) => { p[x.type] = x.value; });
+  return Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour % 24, +p.minute, +p.second) - ms;
+}
+function localToUtc(v) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(v || "");
+  if (!m) return null;
+  const wall = Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]);
+  let t = wall - tzOffset(wall);
+  t = wall - tzOffset(t);
+  return new Date(t);
+}
+function icsText(s) { return String(s || "").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n"); }
+function fold(line) {
+  const out = []; let cur = "";
+  for (const ch of line) { if (new TextEncoder().encode(cur + ch).length > 74) { out.push(cur); cur = " " + ch; } else cur += ch; }
+  out.push(cur); return out.join("\r\n");
+}
+function calendarFile(b, kind, token) {
+  const start = localToUtc(kind === "hmua" ? b.hmuaAt : b.shootAt);
+  if (!start) return null;
+  const end = new Date(start.getTime() + EVENT_MINUTES[kind] * 60000);
+  const stamp = (d) => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  const title = kind === "hmua" ? "Hair & makeup" + (b.hmuaArtist ? " with " + b.hmuaArtist : "") + " · NicVisions shoot" : "Your Show Up shoot with NicVisions";
+  const details = kind === "hmua"
+    ? "Hair and makeup before your Show Up shoot with NicVisions." + (b.hmuaArtist ? "\nArtist: " + b.hmuaArtist : "") + (b.hmuaContact ? "\nContact: " + b.hmuaContact : "")
+    : "Your post-show photoshoot with Nicole from NicVisions Photography. You just show up.";
+  const location = kind === "hmua" ? b.hmuaAddress : b.shootAddress;
+  return ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//NicVisions Photography//Moodboard//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+    "BEGIN:VEVENT", "UID:" + token + "-" + kind + "@nicvisions", "DTSTAMP:" + stamp(new Date()),
+    "DTSTART:" + stamp(start), "DTEND:" + stamp(end), "SUMMARY:" + icsText(title),
+    location ? "LOCATION:" + icsText(location) : "", "DESCRIPTION:" + icsText(details),
+    "END:VEVENT", "END:VCALENDAR"].filter(Boolean).map(fold).join("\r\n") + "\r\n";
 }
 
 // ---------- helpers ----------
