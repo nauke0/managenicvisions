@@ -23,10 +23,3 @@ venue, state, federation), which feeds the show dashboard.
 
 The code is in `scripts/show_monitor.py`; the schedule is in
 `.github/workflows/show-monitor.yml`.
-
-## Client moodboards
-
-`moodboards/` is the private site that shows each client their moodboard
-behind an email code and records when they confirm it. See
-[moodboards/README.md](moodboards/README.md) for how it works and the
-one-time Cloudflare setup.
