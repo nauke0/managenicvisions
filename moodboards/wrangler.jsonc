@@ -1,0 +1,20 @@
+{
+  // NicVisions client moodboards: private, behind Cloudflare Access.
+  "name": "nicvisions-moodboards",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    // Every request goes through the Worker's checks; no file is served directly.
+    "run_worker_first": true
+  },
+  "vars": {
+    // Filled in after Cloudflare Access is set up (see README.md).
+    "TEAM_DOMAIN": "",
+    "ACCESS_AUD": "",
+    "ADMIN_EMAILS": "nauke0@gmail.com",
+    "GITHUB_REPO": "nauke0/managenicvisions"
+  }
+  // Secret, set by the deploy workflow: GITHUB_TOKEN (writes confirmations).
+}
