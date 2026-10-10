@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-08T21:27:03+00:00",
+  "checked_at": "2026-10-10T21:23:59+00:00",
   "source": "https://mycompprep.com/competition-calendar/",
   "shows": [
     {
@@ -27,6 +27,18 @@
       "listed": false
     },
     {
+      "key": "18dcc7040f84bd31",
+      "listing": "10 Oct | NBA Nationals Pro/AM Drum Theatre, Dandenong | VIC | NBA",
+      "date": "2026-10-10",
+      "date_label": "10 Oct",
+      "name": "NBA Nationals Pro/AM",
+      "venue": "Drum Theatre, Dandenong",
+      "state": "VIC",
+      "federation": "NBA",
+      "first_seen": "2026-10-10",
+      "listed": true
+    },
+    {
       "key": "ed4c8be853cf7f0b",
       "listing": "17 Oct | Victorian State Pro Qualifier 360 Main Road, Lower Plenty | VIC | ANB",
       "date": "2026-10-17",
@@ -38,9 +50,5 @@
       "first_seen": "2026-10-05",
       "listed": true
     }
-  ],
-  "last_error": {
-    "at": "2026-10-09T21:25:55+00:00",
-    "message": "The page loaded but no show listings were found in it."
-  }
+  ]
 }
