@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-15T21:39:09+00:00",
+  "checked_at": "2026-10-17T21:33:59+00:00",
   "source": "https://mycompprep.com/competition-calendar/",
   "shows": [
     {
@@ -50,9 +50,5 @@
       "first_seen": "2026-10-05",
       "listed": true
     }
-  ],
-  "last_error": {
-    "at": "2026-10-16T21:35:47+00:00",
-    "message": "The page loaded but no show listings were found in it."
-  }
+  ]
 }
