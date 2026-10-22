@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-21T21:38:46+00:00",
+  "checked_at": "2026-10-22T21:36:14+00:00",
   "source": "https://mycompprep.com/competition-calendar/",
   "shows": [
     {
@@ -36,7 +36,7 @@
       "state": "VIC",
       "federation": "NBA",
       "first_seen": "2026-10-10",
-      "listed": true
+      "listed": false
     },
     {
       "key": "ed4c8be853cf7f0b",
@@ -48,7 +48,7 @@
       "state": "VIC",
       "federation": "ANB",
       "first_seen": "2026-10-05",
-      "listed": true
+      "listed": false
     }
   ]
 }
