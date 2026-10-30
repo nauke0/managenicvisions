@@ -1,7 +1,67 @@
 {
-  "checked_at": "2026-10-26T21:38:59+00:00",
+  "checked_at": "2026-10-30T21:42:54+00:00",
   "source": "https://mycompprep.com/competition-calendar/",
   "shows": [
+    {
+      "key": "4a620b35c182d7ff",
+      "listing": "11 Sep | SA States (Season C) Venue TBC · Date TBC | SA | IFBB",
+      "date": "2026-09-11",
+      "date_label": "11 Sep",
+      "name": "SA States (Season C)",
+      "venue": "Venue TBC · Date TBC",
+      "state": "SA",
+      "federation": "IFBB",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "55327854e4ddeacd",
+      "listing": "12 Sep | Bendigo Classic All Seasons Resort Bendigo, Bendigo | VIC | ICN",
+      "date": "2026-09-12",
+      "date_label": "12 Sep",
+      "name": "Bendigo Classic",
+      "venue": "All Seasons Resort Bendigo, Bendigo",
+      "state": "VIC",
+      "federation": "ICN",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "14dd0037279f8a99",
+      "listing": "12 Sep | VIC States (Season C) Venue TBC | VIC | IFBB",
+      "date": "2026-09-12",
+      "date_label": "12 Sep",
+      "name": "VIC States (Season C)",
+      "venue": "Venue TBC",
+      "state": "VIC",
+      "federation": "IFBB",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "19466160ffae227f",
+      "listing": "26 Sep | Southern Cross Mercure Convention Centre Ballarat, Ballarat | VIC | ICN",
+      "date": "2026-09-26",
+      "date_label": "26 Sep",
+      "name": "Southern Cross",
+      "venue": "Mercure Convention Centre Ballarat, Ballarat",
+      "state": "VIC",
+      "federation": "ICN",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "74ce41b3678f2ee6",
+      "listing": "3 Oct | Victorian State Titles Encore Events Centre, Hoppers Crossing, Melbourne | VIC | ICN",
+      "date": "2026-10-03",
+      "date_label": "3 Oct",
+      "name": "Victorian State Titles",
+      "venue": "Encore Events Centre, Hoppers Crossing, Melbourne",
+      "state": "VIC",
+      "federation": "ICN",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
     {
       "key": "91aad448f59260a3",
       "listing": "04 Oct | SA State Titles Norwood Concert Hall, Adelaide | SA | ICN",
@@ -27,6 +87,18 @@
       "listed": false
     },
     {
+      "key": "d072ccae3d68eeaf",
+      "listing": "9 Oct | Victoria Pro Qualifier Venue TBC | VIC | ANB",
+      "date": "2026-10-09",
+      "date_label": "9 Oct",
+      "name": "Victoria Pro Qualifier",
+      "venue": "Venue TBC",
+      "state": "VIC",
+      "federation": "ANB",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
       "key": "18dcc7040f84bd31",
       "listing": "10 Oct | NBA Nationals Pro/AM Drum Theatre, Dandenong | VIC | NBA",
       "date": "2026-10-10",
@@ -49,10 +121,114 @@
       "federation": "ANB",
       "first_seen": "2026-10-05",
       "listed": false
+    },
+    {
+      "key": "5d14141615811c35",
+      "listing": "4 Apr | Adelaide (Season A) Venue TBC, Adelaide · Date TBC | SA | IFBB",
+      "date": "2027-04-04",
+      "date_label": "4 Apr",
+      "name": "Adelaide (Season A)",
+      "venue": "Venue TBC, Adelaide · Date TBC",
+      "state": "SA",
+      "federation": "IFBB",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "dbcf0a10bea0be99",
+      "listing": "17 Apr | Muscle & Model Supershow Melbourne Convention Centre (Aust Fitness Expo), Melbourne · 17 & 18 Apr | VIC | ICN",
+      "date": "2027-04-17",
+      "date_label": "17 Apr",
+      "name": "Muscle & Model Supershow",
+      "venue": "Melbourne Convention Centre (Aust Fitness Expo), Melbourne · 17 & 18 Apr",
+      "state": "VIC",
+      "federation": "ICN",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "3c39747a36ff0987",
+      "listing": "18 Apr | Melbourne (Season A) Venue TBC, Melbourne | VIC | IFBB",
+      "date": "2027-04-18",
+      "date_label": "18 Apr",
+      "name": "Melbourne (Season A)",
+      "venue": "Venue TBC, Melbourne",
+      "state": "VIC",
+      "federation": "IFBB",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "6ae3d70981941721",
+      "listing": "1 May | Melbourne Classic Encore Events Centre, Hoppers Crossing, Melbourne | VIC | ICN",
+      "date": "2027-05-01",
+      "date_label": "1 May",
+      "name": "Melbourne Classic",
+      "venue": "Encore Events Centre, Hoppers Crossing, Melbourne",
+      "state": "VIC",
+      "federation": "ICN",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "0e523ed997da668f",
+      "listing": "8 May | WNBF Melbourne Moonee Ponds Clocktower Centre, Melbourne | VIC | WNBF",
+      "date": "2027-05-08",
+      "date_label": "8 May",
+      "name": "WNBF Melbourne",
+      "venue": "Moonee Ponds Clocktower Centre, Melbourne",
+      "state": "VIC",
+      "federation": "WNBF",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "f142b119194e235a",
+      "listing": "15 May | Victoria Pro Qualifier Venue TBC | VIC | ANB",
+      "date": "2027-05-15",
+      "date_label": "15 May",
+      "name": "Victoria Pro Qualifier",
+      "venue": "Venue TBC",
+      "state": "VIC",
+      "federation": "ANB",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "89b07ecaa42c976a",
+      "listing": "3 Jul | SA Naturals (Season B) Venue TBC · Date TBC | SA | IFBB",
+      "date": "2027-07-03",
+      "date_label": "3 Jul",
+      "name": "SA Naturals (Season B)",
+      "venue": "Venue TBC · Date TBC",
+      "state": "SA",
+      "federation": "IFBB",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "e1c727bc3e035ef5",
+      "listing": "4 Jul | VIC Naturals (Season B) Venue TBC | VIC | IFBB",
+      "date": "2027-07-04",
+      "date_label": "4 Jul",
+      "name": "VIC Naturals (Season B)",
+      "venue": "Venue TBC",
+      "state": "VIC",
+      "federation": "IFBB",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "69ce82d263cb971e",
+      "listing": "10 Jul | All Female Classic Encore Events Centre, Hoppers Crossing, Melbourne · 1pm | VIC | ICN",
+      "date": "2027-07-10",
+      "date_label": "10 Jul",
+      "name": "All Female Classic",
+      "venue": "Encore Events Centre, Hoppers Crossing, Melbourne · 1pm",
+      "state": "VIC",
+      "federation": "ICN",
+      "first_seen": "2026-10-30",
+      "listed": true
     }
-  ],
-  "last_error": {
-    "at": "2026-10-29T21:46:38+00:00",
-    "message": "The page loaded but no show listings were found in it."
-  }
+  ]
 }
