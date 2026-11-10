@@ -230,5 +230,9 @@
       "first_seen": "2026-10-30",
       "listed": true
     }
-  ]
+  ],
+  "last_error": {
+    "at": "2026-11-10T03:30:12+00:00",
+    "message": "The page loaded but no show listings were found in it."
+  }
 }
