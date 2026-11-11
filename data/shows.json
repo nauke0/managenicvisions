@@ -1,19 +1,7 @@
 {
-  "checked_at": "2026-11-09T00:49:00+00:00",
+  "checked_at": "2026-11-11T01:13:14+00:00",
   "source": "https://mycompprep.com/competition-calendar/",
   "shows": [
-    {
-      "key": "4a620b35c182d7ff",
-      "listing": "11 Sep | SA States (Season C) Venue TBC · Date TBC | SA | IFBB",
-      "date": "2026-09-11",
-      "date_label": "11 Sep",
-      "name": "SA States (Season C)",
-      "venue": "Venue TBC · Date TBC",
-      "state": "SA",
-      "federation": "IFBB",
-      "first_seen": "2026-10-30",
-      "listed": true
-    },
     {
       "key": "55327854e4ddeacd",
       "listing": "12 Sep | Bendigo Classic All Seasons Resort Bendigo, Bendigo | VIC | ICN",
@@ -229,10 +217,18 @@
       "federation": "ICN",
       "first_seen": "2026-10-30",
       "listed": true
+    },
+    {
+      "key": "4a620b35c182d7ff",
+      "listing": "11 Sep | SA States (Season C) Venue TBC · Date TBC | SA | IFBB",
+      "date": "2027-09-11",
+      "date_label": "11 Sep",
+      "name": "SA States (Season C)",
+      "venue": "Venue TBC · Date TBC",
+      "state": "SA",
+      "federation": "IFBB",
+      "first_seen": "2026-10-30",
+      "listed": true
     }
-  ],
-  "last_error": {
-    "at": "2026-11-10T03:30:12+00:00",
-    "message": "The page loaded but no show listings were found in it."
-  }
+  ]
 }
