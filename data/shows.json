@@ -1,31 +1,7 @@
 {
-  "checked_at": "2026-11-11T01:13:14+00:00",
+  "checked_at": "2026-11-12T02:14:17+00:00",
   "source": "https://mycompprep.com/competition-calendar/",
   "shows": [
-    {
-      "key": "55327854e4ddeacd",
-      "listing": "12 Sep | Bendigo Classic All Seasons Resort Bendigo, Bendigo | VIC | ICN",
-      "date": "2026-09-12",
-      "date_label": "12 Sep",
-      "name": "Bendigo Classic",
-      "venue": "All Seasons Resort Bendigo, Bendigo",
-      "state": "VIC",
-      "federation": "ICN",
-      "first_seen": "2026-10-30",
-      "listed": true
-    },
-    {
-      "key": "14dd0037279f8a99",
-      "listing": "12 Sep | VIC States (Season C) Venue TBC | VIC | IFBB",
-      "date": "2026-09-12",
-      "date_label": "12 Sep",
-      "name": "VIC States (Season C)",
-      "venue": "Venue TBC",
-      "state": "VIC",
-      "federation": "IFBB",
-      "first_seen": "2026-10-30",
-      "listed": true
-    },
     {
       "key": "19466160ffae227f",
       "listing": "26 Sep | Southern Cross Mercure Convention Centre Ballarat, Ballarat | VIC | ICN",
@@ -226,6 +202,30 @@
       "name": "SA States (Season C)",
       "venue": "Venue TBC · Date TBC",
       "state": "SA",
+      "federation": "IFBB",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "55327854e4ddeacd",
+      "listing": "12 Sep | Bendigo Classic All Seasons Resort Bendigo, Bendigo | VIC | ICN",
+      "date": "2027-09-12",
+      "date_label": "12 Sep",
+      "name": "Bendigo Classic",
+      "venue": "All Seasons Resort Bendigo, Bendigo",
+      "state": "VIC",
+      "federation": "ICN",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "14dd0037279f8a99",
+      "listing": "12 Sep | VIC States (Season C) Venue TBC | VIC | IFBB",
+      "date": "2027-09-12",
+      "date_label": "12 Sep",
+      "name": "VIC States (Season C)",
+      "venue": "Venue TBC",
+      "state": "VIC",
       "federation": "IFBB",
       "first_seen": "2026-10-30",
       "listed": true
