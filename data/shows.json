@@ -1,19 +1,7 @@
 {
-  "checked_at": "2026-11-25T04:08:34+00:00",
+  "checked_at": "2026-11-26T03:30:15+00:00",
   "source": "https://mycompprep.com/competition-calendar/",
   "shows": [
-    {
-      "key": "19466160ffae227f",
-      "listing": "26 Sep | Southern Cross Mercure Convention Centre Ballarat, Ballarat | VIC | ICN",
-      "date": "2026-09-26",
-      "date_label": "26 Sep",
-      "name": "Southern Cross",
-      "venue": "Mercure Convention Centre Ballarat, Ballarat",
-      "state": "VIC",
-      "federation": "ICN",
-      "first_seen": "2026-10-30",
-      "listed": true
-    },
     {
       "key": "74ce41b3678f2ee6",
       "listing": "3 Oct | Victorian State Titles Encore Events Centre, Hoppers Crossing, Melbourne | VIC | ICN",
@@ -227,6 +215,18 @@
       "venue": "Venue TBC",
       "state": "VIC",
       "federation": "IFBB",
+      "first_seen": "2026-10-30",
+      "listed": true
+    },
+    {
+      "key": "19466160ffae227f",
+      "listing": "26 Sep | Southern Cross Mercure Convention Centre Ballarat, Ballarat | VIC | ICN",
+      "date": "2027-09-26",
+      "date_label": "26 Sep",
+      "name": "Southern Cross",
+      "venue": "Mercure Convention Centre Ballarat, Ballarat",
+      "state": "VIC",
+      "federation": "ICN",
       "first_seen": "2026-10-30",
       "listed": true
     }
